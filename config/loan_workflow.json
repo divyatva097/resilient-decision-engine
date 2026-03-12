@@ -1,0 +1,31 @@
+{
+    "workflow_name": "Loan_Approval_Workflow",
+    "stages": [
+        {
+            "name": "Identity_Verification",
+            "type": "AUTOMATED",
+            "rules": [
+                {
+                    "id": "R1_AGE_CHECK",
+                    "field": "age",
+                    "operator": ">=",
+                    "value": 18,
+                    "on_fail": "REJECT"
+                }
+            ]
+        },
+        {
+            "name": "Credit_Bureau_Check",
+            "type": "EXTERNAL_API",
+            "rules": [
+                {
+                    "id": "R2_CREDIT_SCORE",
+                    "field": "score",
+                    "operator": ">=",
+                    "value": 700,
+                    "on_fail": "MANUAL_REVIEW"
+                }
+            ]
+        }
+    ]
+}

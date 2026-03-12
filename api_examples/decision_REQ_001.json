@@ -1,0 +1,23 @@
+[
+    {
+        "event": "Starting Workflow: Loan_Approval_Workflow"
+    },
+    {
+        "event": "Entering Stage: Identity_Verification"
+    },
+    {
+        "stage": "Identity_Verification",
+        "rule": "R1_AGE_CHECK",
+        "result": "PASS",
+        "detail": "Passed"
+    },
+    {
+        "event": "Entering Stage: Credit_Bureau_Check"
+    },
+    {
+        "stage": "Credit_Bureau_Check",
+        "rule": "R2_CREDIT_SCORE",
+        "result": "PASS",
+        "detail": "Passed"
+    }
+]
